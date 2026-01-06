@@ -22,13 +22,12 @@ public class EmployeeChild implements IEmployee {
         Employee e4 = new Employee(104, "Shohel", 30000, 27);
         Map<Integer, Employee> map = new HashMap();
         
-        for (int i = 101; i < 105; i++){
-            map.put(i, e1);
-        }
         
-        for (int i = 101; i < 105; i++){
-            System.out.println(map.get(i));
-        }
+            map.put(101, e1);
+            map.put(102, e2);
+            map.put(103, e3);
+            map.put(104, e4);
+       
         
         return map;
     }

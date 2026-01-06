@@ -5,6 +5,8 @@
  */
 package jan06.calasstask;
 
+import java.util.Map;
+
 /**
  *
  * @author Masud Rana
@@ -13,6 +15,15 @@ public class Main {
     public static void main(String[] args) {
         EmployeeChild epployee = new EmployeeChild();
         
-        epployee.showMap();
+        Map<Integer, Employee> m = epployee.showMap();
+        
+        m.forEach((id, emp) -> {
+            System.out.println(
+                "ID: " + id +
+                ", Name: " + emp.getName() +
+                ", Salary: " + emp.getSalary() +
+                ", Age: " + emp.getAge()
+            );
+        });
     }
 }
