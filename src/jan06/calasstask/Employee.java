@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * @author Masud Rana
  */
-public class Employee extends Main implements IEmployee {
+public class Employee {
     private int id;
     private String name;
     private double salary;
@@ -21,20 +21,26 @@ public class Employee extends Main implements IEmployee {
         this.age = age;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    
 
     @Override
     public String toString() {
         return "Employee{" + "id=" + id + ", name=" + name + ", salary=" + salary + ", age=" + age + '}';
-    }
-
-    Map<Integer, Employee> map1 = new HashMap();
-    
-    @Override
-    public void showMap() {
-        Main m = new Main();
-
-    }
-    
-    
-    
+    }  
 }
