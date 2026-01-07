@@ -5,6 +5,7 @@
  */
 package empmgt.service;
 
+import empmgt.dao.EmployeeDAO;
 import empmgt.model.Employee;
 
 /**
@@ -13,6 +14,8 @@ import empmgt.model.Employee;
  */
 public class EmployeeService {
     public Employee create (Employee e){
-        return e;
+        EmployeeDAO eDAO = new EmployeeDAO();
+        Employee emp = eDAO.insert(e);
+        return emp;
     }    
 }

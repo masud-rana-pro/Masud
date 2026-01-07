@@ -5,6 +5,7 @@
  */
 package empmgt.controller;
 import empmgt.model.Employee;
+import empmgt.service.EmployeeService;
 
 /**
  *
@@ -12,6 +13,8 @@ import empmgt.model.Employee;
  */
 public class EmployeeController {
     public Employee create (Employee e){
-        return e;
+        EmployeeService es = new EmployeeService();
+        Employee emp = es.create(e);
+        return emp;
     }
 }
